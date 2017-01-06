@@ -28,7 +28,6 @@ result = np.argmax(y.data, axis=1)
 result_df = pd.DataFrame(columns=["PassengerId", "Survived"])
 
 for idx, row in org_data_f.iterrows():
-    # result_df.loc[idx] = [int(org_data_f["PassengerId"][idx]), int(result[idx])]
     result_df.loc[idx] = [org_data_f["PassengerId"][idx], result[idx]]
 
 result_df = result_df.astype(int)
